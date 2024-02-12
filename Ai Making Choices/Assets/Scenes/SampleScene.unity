@@ -746,7 +746,7 @@ MonoBehaviour:
   spot1: {fileID: 1150608959}
   spot2: {fileID: 443348453}
   spot3: {fileID: 1685492180}
-  idel: 1
+  BT: {fileID: 11400000, guid: 4c9a356b85e609349b924ed17f8ee207, type: 2}
 --- !u!1 &1685492180 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3451495014269047564, guid: 890f4c4aa50cda248bba4e8b6e1c31ac, type: 3}
