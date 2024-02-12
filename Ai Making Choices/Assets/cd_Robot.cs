@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Networking.PlayerConnection;
 using UnityEngine;
 using UnityEngine.AI;
 using XNode;
@@ -20,6 +21,14 @@ public class cd_Robot : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         current_tartget = spot2;
+        foreach (BT_BaseNode i in BT.nodes)
+        {
+            if (i.GetNodeType() == "start")
+            {
+                BT.curent = i;
+                break;
+            }
+        }
     }
     void Update()
     {
@@ -41,31 +50,45 @@ public class cd_Robot : MonoBehaviour
         //}
         if (idel)
         {
-            foreach (BT_BaseNode i in BT.nodes)
-            {
-                if (i.GetNodeType() == "start")
-                {
-                    BT.curent = i;
-                    break;
-                }
-            }
             foreach (NodePort p in BT.curent.Ports)
             {
                 if (p.fieldName == "exit")
                 {
-                    BT.curent = p.Connection.node as BT_BaseNode;
-                    string nodetype = BT.curent.GetNodeType();
-                    switch (nodetype)
+                    if (p.ConnectionCount > 0)
                     {
-                        case "action":
-                            BT_ActionNode actionNode = p.Connection.node as BT_ActionNode;
-                            Current_Action = actionNode.GetAction();
-                            Debug.Log(Current_Action);
-                            break;
-                        default:
-                            break;
+                        NodePort[] conections = p.GetConnections().ToArray();
+                        BT_BaseNode[] childNodes = new BT_BaseNode[conections.Length];
+                        for (int i = 0; i < conections.Length; i++)
+                        {
+                            childNodes[i] = conections[i].Connection.node as BT_BaseNode;     //get all child nodes
+                        }
+
+
+                        BT.curent = p.Connection.node as BT_BaseNode;
+                        string nodetype = BT.curent.GetNodeType();
+                        switch (nodetype)
+                        {
+                            case "action":
+                                BT_ActionNode actionNode = p.Connection.node as BT_ActionNode;
+                                Current_Action = actionNode.GetAction();
+                                Debug.Log(Current_Action);
+                                break;
+                            default:
+                                break;
+                        }
+                        idel = false;
                     }
-                    idel = false;
+                    else //return to start
+                    {
+                        foreach (BT_BaseNode i in BT.nodes)
+                        {
+                            if (i.GetNodeType() == "start")
+                            {
+                                BT.curent = i;
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }
