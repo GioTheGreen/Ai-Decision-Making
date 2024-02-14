@@ -21,14 +21,7 @@ public class cd_Robot : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         current_tartget = spot2;
-        foreach (BT_BaseNode i in BT.nodes)
-        {
-            if (i.GetNodeType() == "start")
-            {
-                BT.curent = i;
-                break;
-            }
-        }
+        BT.Refreash();
     }
     void Update()
     {
@@ -80,14 +73,7 @@ public class cd_Robot : MonoBehaviour
                     }
                     else //return to start
                     {
-                        foreach (BT_BaseNode i in BT.nodes)
-                        {
-                            if (i.GetNodeType() == "start")
-                            {
-                                BT.curent = i;
-                                break;
-                            }
-                        }
+                        BT.Refreash();
                     }
                 }
             }
@@ -161,10 +147,6 @@ public class cd_Robot : MonoBehaviour
     private void setCurrentTarget(GameObject GO)
     {
         current_tartget = GO;
-    }
-    public void setCurrentAction(string action)
-    {
-        Current_Action = action;
     }
     //public int getHeldItemType()
     //{
