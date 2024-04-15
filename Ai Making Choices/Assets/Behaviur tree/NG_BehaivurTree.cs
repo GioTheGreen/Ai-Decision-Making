@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEditor.MemoryProfiler;
 using UnityEngine;
 using XNode;
@@ -108,10 +109,10 @@ public class NG_BehaivurTree : NodeGraph {
                         }
                         break;
                     case EState.eFailed:
-                        //ParentNode();
+                        ParentNode();
                         break;
                     case EState.eSuccess:
-                        //ParentNode();
+                        ParentNode();
                         break;
                     default:
                         break;
@@ -147,10 +148,10 @@ public class NG_BehaivurTree : NodeGraph {
                         }
                         break;
                     case EState.eFailed:
-                        //ParentNode();
+                        ParentNode();
                         break;
                     case EState.eSuccess:
-                        //ParentNode();
+                        ParentNode();
                         break;
                     default:
                         break;
@@ -166,10 +167,10 @@ public class NG_BehaivurTree : NodeGraph {
                         //wait for response...
                         break;
                     case EState.eFailed:
-                        //ParentNode();
+                        ParentNode();
                         break;
                     case EState.eSuccess:
-                        //ParentNode();
+                        ParentNode();
                         break;
                     default:
                         break;
@@ -242,59 +243,60 @@ public class NG_BehaivurTree : NodeGraph {
         return unused;
     }
 
-    private BT_BaseNode[] InOrder(BT_BaseNode[] nodes) // order array in height(y in graph) order
+    private BT_BaseNode[] InOrder(BT_BaseNode[] nodes) // order array
     {
         BT_BaseNode[] toReturn = nodes;
 
-        //while (nodes.Length > 0)
-        //{
-        //    int currnetHighest = 1;
-        //    
-        //    for (int i = 0; i < nodes.Length; i++)
-        //    {
-        //        if (nodes[i].position.y < nodes[currnetHighest].position.y)
-        //        {
-        //            currnetHighest = i;
-        //            cHighestNode = nodes[i];
-        //        }
-        //    }
-
-        //    Array.Resize(ref toReturn, toReturn.Length + 1);
-        //    toReturn[toReturn.Length] = nodes[currnetHighest];
-
-        //    for (int i = currnetHighest; i < nodes.Length - 1; i++)
-        //    {
-        //        nodes[i] = nodes[i + 1];
-        //    }
-        //    Array.Resize(ref nodes, toReturn.Length - 1);
-        //}
-
         //bubble sort
-
-        int rounds = nodes.Length;
         BT_BaseNode temp = null;
 
-        for (int i = 0; i < rounds; i++)
+        switch (curent.PriorotySort)
         {
-            if (rounds < 2)
-            {
-                break;
-            }
-            for (int j = 0; j < rounds - 1; j++)
-            {
-                float highta = toReturn[j].position.y;
-                float hightb = toReturn[j+1].position.y;
-
-                if (highta >= hightb)
+            case ESort.eHeight: // order array in height(y in graph) order
+                int rounds = nodes.Length;
+                for (int i = 0; i < rounds; i++)
                 {
-                    temp = toReturn[j];
-                    toReturn[j] = toReturn[j+1];
-                    toReturn[j+1] = temp;
+                    if (rounds < 2)
+                    {
+                        break;
+                    }
+                    for (int j = 0; j < rounds - 1; j++)
+                    {
+                        float highta = toReturn[j].position.y;
+                        float hightb = toReturn[j+1].position.y;
+
+                        if (highta >= hightb)
+                        {
+                            temp = toReturn[j];
+                            toReturn[j] = toReturn[j+1];
+                            toReturn[j+1] = temp;
+                        }
+                    }
+                    rounds--;
                 }
-            }
-            rounds--;
+                break;
+            case ESort.ePriority: // order array in priority order
+
+                break;
+            case ESort.eRandom:  // mix array in random order
+
+                break;
+            default:
+                break;
         }
 
+
         return toReturn;
+    }
+    public void ParentNode()
+    {
+        foreach (NodePort p in curent.Ports)
+        {
+            if (p.fieldName == "entry")
+            {
+                NodePort[] conections = p.GetConnections().ToArray();
+                curent = conections[0].Connection.node as BT_BaseNode;
+            }
+        }
     }
 }

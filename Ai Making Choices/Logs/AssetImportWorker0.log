@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/release' branch; Version is '2022.3.0f1 (fb119bb0b476) revision 16454043'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 6057 MB
+OS: 'Windows 10  (10.0.19045) 64bit Enterprise' Language: 'en' Physical Memory: 32493 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/sakit/A Documents/Unity/Ai-Decision-Making/Ai Making Choices
+C:/Users/B1050622/Documents/GitHub/Ai-Decision-Making/Ai Making Choices
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63378
-Successfully changed project path to: C:/Users/sakit/A Documents/Unity/Ai-Decision-Making/Ai Making Choices
-C:/Users/sakit/A Documents/Unity/Ai-Decision-Making/Ai Making Choices
+61699
+Successfully changed project path to: C:/Users/B1050622/Documents/GitHub/Ai-Decision-Making/Ai Making Choices
+C:/Users/B1050622/Documents/GitHub/Ai-Decision-Making/Ai Making Choices
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,64 +49,69 @@ C:/Users/sakit/A Documents/Unity/Ai-Decision-Making/Ai Making Choices
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [25900] Host "[IP] 192.168.0.67 [Port] 0 [Flags] 2 [Guid] 129975471 [EditorId] 129975471 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-8QBR6EGP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [20108] Host "[IP] 152.105.219.175 [Port] 0 [Flags] 2 [Guid] 756905260 [EditorId] 756905260 [Version] 1048832 [Id] WindowsEditor(7,TU39433) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [25900] Host "[IP] 192.168.0.67 [Port] 0 [Flags] 2 [Guid] 129975471 [EditorId] 129975471 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-8QBR6EGP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20108] Host "[IP] 152.105.219.175 [Port] 0 [Flags] 2 [Guid] 756905260 [EditorId] 756905260 [Version] 1048832 [Id] WindowsEditor(7,TU39433) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 37.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 27.87 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.0f1 (fb119bb0b476)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/sakit/A Documents/Unity/Ai-Decision-Making/Ai Making Choices/Assets
+[Subsystems] Discovering subsystems at path C:/Users/B1050622/Documents/GitHub/Ai-Decision-Making/Ai Making Choices/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon(TM) Vega 8 Graphics (ID=0x15d8)
-    Vendor:   ATI
-    VRAM:     3028 MB
-    Driver:   31.0.21001.45002
+    Renderer: NVIDIA GeForce RTX 2080 (ID=0x1e82)
+    Vendor:   NVIDIA
+    VRAM:     8002 MB
+    Driver:   31.0.15.3114
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.016802 seconds.
-- Loaded All Assemblies, in  0.693 seconds
+Registered in 0.101154 seconds.
+- Loaded All Assemblies, in  1.367 seconds
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2908 ms
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.484 seconds
-Domain Reload Profiling: 1171ms
-	BeginReloadAssembly (216ms)
+- Finished resetting the current domain, in  3.423 seconds
+Domain Reload Profiling: 4779ms
+	BeginReloadAssembly (500ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (123ms)
-	LoadAllAssembliesAndSetupDomain (265ms)
-		LoadAssemblies (209ms)
+	RebuildCommonClasses (99ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (427ms)
+	LoadAllAssembliesAndSetupDomain (310ms)
+		LoadAssemblies (500ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (247ms)
-			TypeCache.Refresh (245ms)
-				TypeCache.ScanAssembly (226ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (286ms)
+			TypeCache.Refresh (284ms)
+				TypeCache.ScanAssembly (262ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (485ms)
+	FinalizeReload (3424ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (378ms)
+		SetupLoadedEditorAssemblies (3344ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (19ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (3130ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (265ms)
-			ProcessInitializeOnLoadMethodAttributes (78ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (133ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -114,53 +119,55 @@ Domain Reload Profiling: 1171ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sakit\A Documents\Unity\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sakit\A Documents\Unity\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.662 seconds
-Refreshing native plugins compatible for Editor in 9.93 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\B1050622\Documents\GitHub\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\B1050622\Documents\GitHub\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.680 seconds
+Refreshing native plugins compatible for Editor in 9.66 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.992 seconds
-Domain Reload Profiling: 2648ms
-	BeginReloadAssembly (285ms)
+- Finished resetting the current domain, in  0.831 seconds
+Domain Reload Profiling: 2500ms
+	BeginReloadAssembly (396ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (16ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (13ms)
 	initialDomainReloadingComplete (88ms)
-	LoadAllAssembliesAndSetupDomain (1211ms)
-		LoadAssemblies (817ms)
+	LoadAllAssembliesAndSetupDomain (1118ms)
+		LoadAssemblies (992ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (555ms)
-			TypeCache.Refresh (521ms)
-				TypeCache.ScanAssembly (498ms)
-			ScanForSourceGeneratedMonoScriptInfo (27ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (994ms)
+		AnalyzeDomain (408ms)
+			TypeCache.Refresh (387ms)
+				TypeCache.ScanAssembly (363ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (831ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (721ms)
+		SetupLoadedEditorAssemblies (621ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (122ms)
-			ProcessInitializeOnLoadAttributes (499ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
-			AfterProcessingInitializeOnLoad (20ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (337ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (23ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 6.47 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (24ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.20 seconds
+Refreshing native plugins compatible for Editor in 12.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3143 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (56.3 KB). Loaded Objects now: 3609.
-Memory consumption went from 117.6 MB to 117.5 MB.
-Total: 6.828800 ms (FindLiveObjects: 0.679200 ms CreateObjectMapping: 0.271100 ms MarkObjects: 5.664800 ms  DeleteObjects: 0.211700 ms)
+Unloading 3145 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (56.7 KB). Loaded Objects now: 3613.
+Memory consumption went from 123.3 MB to 123.2 MB.
+Total: 3.534800 ms (FindLiveObjects: 0.312400 ms CreateObjectMapping: 0.165700 ms MarkObjects: 2.926900 ms  DeleteObjects: 0.128300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -175,69 +182,165 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 321903.738387 seconds.
-  path: Assets/Behaviur tree/NG_BehaivurTree.cs
-  artifactKey: Guid(e114fe56689d6924eaaa18949cfe6d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Behaviur tree/NG_BehaivurTree.cs using Guid(e114fe56689d6924eaaa18949cfe6d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2484383eb99b35f9516626428321c10c') in 0.003729 seconds
+  Time since last request: 43853.300968 seconds.
+  path: Assets/spot.prefab
+  artifactKey: Guid(890f4c4aa50cda248bba4e8b6e1c31ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/spot.prefab using Guid(890f4c4aa50cda248bba4e8b6e1c31ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a493b4c2e1cfbf285d9e6cd0cd23162e') in 0.112596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/floor_mat.mat
+  artifactKey: Guid(d6e510a9075ea5d49b55f18bc6354c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/floor_mat.mat using Guid(d6e510a9075ea5d49b55f18bc6354c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17964f5ee4d09535fc57102a21be1d9') in 0.070784 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 37.831556 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(753260a66b44aa649809310651d68ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(753260a66b44aa649809310651d68ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7a900b57d857679816221c5c032f904') in 0.000875 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 876.696205 seconds.
-  path: Assets/Behaviur tree/NG_BehaivurTree.cs
-  artifactKey: Guid(e114fe56689d6924eaaa18949cfe6d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Behaviur tree/NG_BehaivurTree.cs using Guid(e114fe56689d6924eaaa18949cfe6d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23552c252d777c380dab2a0b0dc8475') in 0.049359 seconds
+  Time since last request: 1.470656 seconds.
+  path: Assets/Scenes/SampleScene
+  artifactKey: Guid(1040175972f983c498c2556b0e67e908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene using Guid(1040175972f983c498c2556b0e67e908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d65d5d2b7ad4977665869ffee2636a9') in 0.290244 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
+Received Import Request.
+  Time since last request: 0.215612 seconds.
+  path: Assets/Scenes/SampleScene/NavMesh-NavMesh Surface.asset
+  artifactKey: Guid(fb3b08ace6ce89941978a67c8c4c6e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene/NavMesh-NavMesh Surface.asset using Guid(fb3b08ace6ce89941978a67c8c4c6e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed99317efb42f825aef18985128074c') in 0.052487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 138.684144 seconds.
+  path: Assets/Behaviur tree
+  artifactKey: Guid(187298c3c0a85614b81c9f4c5e749c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree using Guid(187298c3c0a85614b81c9f4c5e749c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28622c16ba1799d2ab83ccba164c7dfc') in 0.000777 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.105368 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '207a87c82fd6e414c811bfb82d2e32a0') in 0.007446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 276.410951 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff1cf5ff6cc95b7ac821f75359493cbc') in 0.002865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 2.364414 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f2e13a3b549016d3fe934dba675e73c') in 0.002537 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 8.172101 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1175f2915d4c9f061625ed24bfb5eb1e') in 0.002610 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.540636 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bc0c7ffa101502eb3ae973d66409c0d') in 0.002444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.930201 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d287342673b930d72207fdee69d4cab') in 0.002456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\sakit\A Documents\Unity\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\sakit\A Documents\Unity\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  2.926 seconds
-Refreshing native plugins compatible for Editor in 8.28 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\B1050622\Documents\GitHub\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\B1050622\Documents\GitHub\Ai-Decision-Making\Ai Making Choices\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.038 seconds
+Refreshing native plugins compatible for Editor in 26.19 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at XNodeEditor.NodeEditorAssetModProcessor.OnReloadEditor () [0x0004b] in C:\Users\B1050622\Documents\GitHub\Ai-Decision-Making\Ai Making Choices\Assets\xNode-1.8.0\Scripts\Editor\NodeEditorAssetModProcessor.cs:55 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.283 seconds
-Domain Reload Profiling: 5202ms
-	BeginReloadAssembly (818ms)
+- Finished resetting the current domain, in  2.025 seconds
+Domain Reload Profiling: 4057ms
+	BeginReloadAssembly (523ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (25ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (385ms)
-	RebuildCommonClasses (68ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (75ms)
-	LoadAllAssembliesAndSetupDomain (1940ms)
-		LoadAssemblies (1642ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (90ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (1385ms)
+		LoadAssemblies (1346ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (569ms)
-			TypeCache.Refresh (551ms)
-				TypeCache.ScanAssembly (465ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
+		AnalyzeDomain (387ms)
+			TypeCache.Refresh (379ms)
+				TypeCache.ScanAssembly (355ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (2284ms)
+	FinalizeReload (2026ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (625ms)
+		SetupLoadedEditorAssemblies (814ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (97ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (117ms)
-			ProcessInitializeOnLoadAttributes (408ms)
-			ProcessInitializeOnLoadMethodAttributes (58ms)
-			AfterProcessingInitializeOnLoad (19ms)
+			BeforeProcessingInitializeOnLoad (241ms)
+			ProcessInitializeOnLoadAttributes (378ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (36ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 12.32 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (46ms)
+Refreshing native plugins compatible for Editor in 9.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3135 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (30.6 KB). Loaded Objects now: 3612.
-Memory consumption went from 116.4 MB to 116.4 MB.
-Total: 10.047200 ms (FindLiveObjects: 0.792100 ms CreateObjectMapping: 0.345900 ms MarkObjects: 8.788800 ms  DeleteObjects: 0.118400 ms)
+Unloading 3136 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (32.9 KB). Loaded Objects now: 3657.
+Memory consumption went from 121.9 MB to 121.9 MB.
+Total: 5.293000 ms (FindLiveObjects: 0.564400 ms CreateObjectMapping: 0.653400 ms MarkObjects: 3.988700 ms  DeleteObjects: 0.084400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -253,17 +356,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 205.726931 seconds.
-  path: Assets/Behaviur tree/NG_BehaivurTree.cs
-  artifactKey: Guid(e114fe56689d6924eaaa18949cfe6d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Behaviur tree/NG_BehaivurTree.cs using Guid(e114fe56689d6924eaaa18949cfe6d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910c7f1451f2bcc932491bd094bff326') in 0.005376 seconds
+  Time since last request: 2139.612618 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ebf42e469cbed0856aaa76d491f201') in 0.104892 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 5
 ========================================================================
 Received Import Request.
-  Time since last request: 1.139388 seconds.
-  path: Assets/Behaviur tree/BT_BaseNode.cs
-  artifactKey: Guid(2c213cd0daec3604d993b34630fe7db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Behaviur tree/BT_BaseNode.cs using Guid(2c213cd0daec3604d993b34630fe7db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a24ed6ea0d3dc3fa5155dc62b7e2d6') in 0.000805 seconds
+  Time since last request: 16.615079 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b753f1215c6a14c0d7381bce82909ec0') in 0.002455 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 8.643031 seconds.
+  path: Assets/Behaviur tree/New NG_Behaivur Tree.asset
+  artifactKey: Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Behaviur tree/New NG_Behaivur Tree.asset using Guid(4c9a356b85e609349b924ed17f8ee207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ae4af577efb9b0f4d731f15253e6e4') in 0.003577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
