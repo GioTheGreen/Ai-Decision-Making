@@ -89,29 +89,29 @@ public class NG_BehaivurTree : NodeGraph {
                         bool found = false;
                         for (int i = 0; i < OrderedNodes.Length; i++)
                         {
-                            if (OrderedNodes[i].state == EState.eSuccess)
+                            if (OrderedNodes[i].state == EState.eSuccess) // see first is it has succesed if so no need to do others
                             {
-                                continue;
-                            }
-                            if (OrderedNodes[i].state == EState.eFailed)
-                            {
-                                curent.state = EState.eFailed;
+                                found = true;
+                                curent.state = EState.eSuccess;
                                 break;
                             }
-                            found = true;
-                            curent = OrderedNodes[i];
-                            break;
+                            if (OrderedNodes[i].state == EState.eUnkown)
+                            {
+                                found = true;
+                                curent = OrderedNodes[i];
+                                break;
+                            }
                         }
-                        if (!found)
+                        if (!found) // if no tast succeded then return false
                         {
-                            curent.state = EState.eSuccess;
+                            curent.state = EState.eFailed;
                         }
                         break;
                     case EState.eFailed:
-                        ParentNode();
+                        //ParentNode();
                         break;
                     case EState.eSuccess:
-                        ParentNode();
+                        //ParentNode();
                         break;
                     default:
                         break;
@@ -124,34 +124,56 @@ public class NG_BehaivurTree : NodeGraph {
                         curent.state = EState.eInProgress;
                         break;
                     case EState.eInProgress:
+                        bool found = false;
+                        for (int i = 0; i < OrderedNodes.Length; i++)
+                        {
+                            if (OrderedNodes[i].state == EState.eSuccess)
+                            {
+                                continue;
+                            }
+                            if (OrderedNodes[i].state == EState.eFailed)
+                            {
+                                curent.state = EState.eFailed;
+                                found = true;
+                                break;
+                            }
+                            found = true;
+                            curent = OrderedNodes[i];
+                            break;
+                        }
+                        if (!found)
+                        {
+                            curent.state = EState.eSuccess;
+                        }
                         break;
                     case EState.eFailed:
+                        //ParentNode();
                         break;
                     case EState.eSuccess:
+                        //ParentNode();
                         break;
                     default:
                         break;
                 }
                 break;
             case "action":
-
-                break;
-            default:
-                break;
-        }
-
-
-
-
-        switch (curent.state)
-        {
-            case EState.eUnkown:
-                break;
-            case EState.eInProgress:
-                break;
-            case EState.eFailed:
-                break;
-            case EState.eSuccess:
+                switch (curent.state)
+                {
+                    case EState.eUnkown:
+                        curent.state = EState.eInProgress;
+                        break;
+                    case EState.eInProgress:
+                        //wait for response...
+                        break;
+                    case EState.eFailed:
+                        //ParentNode();
+                        break;
+                    case EState.eSuccess:
+                        //ParentNode();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
