@@ -13,7 +13,7 @@ using static BT_BaseNode;
 public class NG_BehaivurTree : NodeGraph {
 	public BT_BaseNode curent;
     public bool error = false;
-    public string DefultAction = "print/error";
+    public string DefultAction = "print/defult";
     public void Refreash()
     {
         foreach (BT_BaseNode i in nodes)
@@ -44,19 +44,19 @@ public class NG_BehaivurTree : NodeGraph {
                 childNodes = new BT_BaseNode[conections.Length];
                 for (int i = 0; i < conections.Length; i++)
                 {
-                    childNodes[i] = conections[i].Connection.node as BT_BaseNode;     //get all child nodes
+                    childNodes[i] = conections[i].node as BT_BaseNode;     //get all child nodes
                 }
             }
         }
         BT_BaseNode[] OrderedNodes = new BT_BaseNode[childNodes.Length];
         OrderedNodes = InOrder(childNodes);
-
         switch (curent.GetNodeType())//loop till current is action? maybe? not sure if infinate loop, loop detetion or provention needed possibaly
         {
             case "start"://if no avalable paths start_stat = success, if there is go to most approprate
                 switch (curent.state)
                 {
                     case EState.eUnkown:
+                        
                         bool found = false;
                         for (int i = 0; i < OrderedNodes.Length; i++)
                         {
@@ -74,7 +74,7 @@ public class NG_BehaivurTree : NodeGraph {
                         }
                         break;
                     case EState.eSuccess:
-                        Refreash();
+                        //Refreash();//loop tree
                         break;
                     default:
                         break;
@@ -183,8 +183,16 @@ public class NG_BehaivurTree : NodeGraph {
 
     public string Read_Action() 
     {
-        BT_ActionNode a = curent as BT_ActionNode;
-        return a.GetAction();
+        if (curent.GetNodeType() == "action")
+        {
+            BT_ActionNode a = curent as BT_ActionNode;
+            return a.GetAction();
+        }
+        else
+        {
+            return DefultAction;
+        }
+        
     }
 
     //public string Read_Action_condition()                not sure if i need this yet
@@ -200,33 +208,16 @@ public class NG_BehaivurTree : NodeGraph {
 
     public void next()
     {
-        switch (curent.GetNodeType())//unsure if selector and sequence will be needed for this section but decided to include it to stop any furture errors
+        if (curent.GetNodeType() == "action")
         {
-            case "start":
-                if (NumberOfUNused() == 0) //reset tree
-                {
-                    Refreash();
-                }
-                else
-                {
-                    NextActionNode();
-                }// may not be needed
-                break;
-            case "selector":
+            if (curent.state != EState.eInProgress)
+            {
                 NextActionNode();
-                break;
-            case "sequence":
-                NextActionNode();
-                break;
-            case "action":
-                BT_ActionNode a = curent as BT_ActionNode;
-                if (a.state != EState.eInProgress && a.state != EState.eUnkown)
-                {
-                    NextActionNode();
-                }
-                break;
-            default:
-                break;
+            }
+        }
+        else
+        {
+            NextActionNode();
         }
     }
 
@@ -295,7 +286,7 @@ public class NG_BehaivurTree : NodeGraph {
             if (p.fieldName == "entry")
             {
                 NodePort[] conections = p.GetConnections().ToArray();
-                curent = conections[0].Connection.node as BT_BaseNode;
+                curent = conections[0].node as BT_BaseNode;
             }
         }
     }

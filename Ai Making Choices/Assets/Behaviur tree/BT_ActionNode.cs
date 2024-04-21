@@ -5,10 +5,10 @@ using XNode;
 
 public class BT_ActionNode : BT_BaseNode
 {
-	[Input] public int entry;
+    [Input] public int entry;
 	[Output] public int exit;
 	public string Action;
-	public bool done = false;
+	//public bool done = false;
 
 	public string GetAction() 
 	{
