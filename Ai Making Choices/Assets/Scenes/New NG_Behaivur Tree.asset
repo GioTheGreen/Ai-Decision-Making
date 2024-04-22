@@ -49,7 +49,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 0
+  state: 2
   PriorotySort: 0
   priority: 0
   entry: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 0
+  state: 2
   PriorotySort: 0
   priority: 0
   entry: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 0
+  state: 3
   PriorotySort: 0
   priority: 0
   entry: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 0
+  state: 3
   PriorotySort: 0
   priority: 1
   entry: 0
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Name: BT_Sequence
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 168, y: -40}
+  position: {x: 168, y: -24}
   ports:
     keys:
     - entry
