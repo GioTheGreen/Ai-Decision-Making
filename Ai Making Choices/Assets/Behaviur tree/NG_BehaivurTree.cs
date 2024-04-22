@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
@@ -240,11 +241,11 @@ public class NG_BehaivurTree : NodeGraph {
 
         //bubble sort
         BT_BaseNode temp = null;
+        int rounds = nodes.Length;
 
         switch (curent.PriorotySort)
         {
             case ESort.eHeight: // order array in height(y in graph) order
-                int rounds = nodes.Length;
                 for (int i = 0; i < rounds; i++)
                 {
                     if (rounds < 2)
@@ -267,16 +268,83 @@ public class NG_BehaivurTree : NodeGraph {
                 }
                 break;
             case ESort.ePriority: // order array in priority order
+                for (int i = 0; i < rounds; i++)
+                {
+                    if (rounds < 2)
+                    {
+                        break;
+                    }
+                    for (int j = 0; j < rounds - 1; j++)
+                    {
+                        int prioritya = toReturn[j].priority;
+                        int priorityb = toReturn[j + 1].priority;
 
+                        if (prioritya >= priorityb)
+                        {
+                            temp = toReturn[j];
+                            toReturn[j] = toReturn[j + 1];
+                            toReturn[j + 1] = temp;
+                        }
+                    }
+                    rounds--;
+                }
                 break;
             case ESort.eRandom:  // mix array in random order
-
+                BT_BaseNode[] done = new BT_BaseNode[rounds];
+                int done_u = 0;
+                BT_BaseNode[] not_done = new BT_BaseNode[rounds];
+                int not_done_u = 0;
+                int[] read = new int[rounds];
+                while (rounds > 0)
+                {
+                    int rand = UnityEngine.Random.Range(0,rounds);
+                    if (rounds != read.Length)
+                    {
+                        if (read.Contains<int>(rand))
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            read[read.Length - rounds] = rand;
+                        }
+                    }
+                    if (toReturn[rand].state == EState.eUnkown)
+                    {
+                        not_done[not_done_u] = toReturn[rand];
+                    }
+                    else
+                    {
+                        done[done_u] = toReturn[rand];
+                    }
+                    rounds--;
+                }
+                for (int i = 0; i < not_done_u; i++)
+                {
+                    int rand = UnityEngine.Random.Range(0, not_done_u);
+                    temp = not_done[i];
+                    not_done[i] = not_done[rand];
+                    not_done[rand] = temp;
+                }
+                for (int i = 0; i < done_u; i++)
+                {
+                    int rand = UnityEngine.Random.Range(0, done_u);
+                    temp = done[i];
+                    done[i] = done[rand];
+                    done[rand] = temp;
+                }
+                for (int i = 0; i < done_u; i++)
+                {
+                    toReturn[i] = done[i];
+                }
+                for (int i = 0; i < not_done_u; i++)
+                {
+                    toReturn[i + done_u] = not_done[i];
+                }
                 break;
             default:
                 break;
         }
-
-
         return toReturn;
     }
     public void ParentNode()
