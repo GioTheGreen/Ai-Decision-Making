@@ -31,17 +31,42 @@ public class NG_BehaivurTree : NodeGraph {
                 //a.done = false;
             }
 
-            //if (i.PriorotySort == ESort.eRandom)
-            //{
-            //    foreach (NodePort p in curent.Ports)
-            //    {
-            //        if (p.fieldName == "exit")
-            //        {
-            //            int childaren = p.GetConnections().Count;
+            if (i.PriorotySort == ESort.eRandom)
+            {
+                foreach (NodePort p in i.Ports)
+                {
+                    if (p.fieldName == "exit")
+                    {
+                        int[] rList;
+                        int Max = p.GetConnections().Count;
+                        rList = new int[Max];
 
-            //        }
-            //    }
-            //}
+                        for (int J = 0; J < Max; J++)
+                        {
+                            rList[J] = J;
+                        }
+
+                        System.Random rng = new System.Random(); ;
+                        int n = rList.Length;
+                        while (n > 1)
+                        {
+                            int k = rng.Next(n--);
+                            int temp = rList[n];
+                            rList[n] = rList[k];
+                            rList[k] = temp;
+                        }
+
+                        NodePort[] conections = p.GetConnections().ToArray();
+                        for (int z = 0; z < conections.Length;z++)
+                        {
+                            BT_BaseNode b = conections[z].node as BT_BaseNode;
+                            b.priority = rList[z];
+                        }
+
+
+                    }
+                }
+            }
         }
     }
 
@@ -303,56 +328,25 @@ public class NG_BehaivurTree : NodeGraph {
                 }
                 break;
             case ESort.eRandom:  // mix array in random order
-                BT_BaseNode[] done = new BT_BaseNode[rounds];
-                int done_u = 0;
-                BT_BaseNode[] not_done = new BT_BaseNode[rounds];
-                int not_done_u = 0;
-                int[] read = new int[rounds];
-                while (rounds > 0)
+                for (int i = 0; i < rounds; i++)
                 {
-                    int rand = UnityEngine.Random.Range(0,rounds);
-                    if (rounds != read.Length)
+                    if (rounds < 2)
                     {
-                        if (read.Contains<int>(rand))
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            read[read.Length - rounds] = rand;
-                        }
+                        break;
                     }
-                    if (toReturn[rand].state == EState.eUnkown)
+                    for (int j = 0; j < rounds - 1; j++)
                     {
-                        not_done[not_done_u] = toReturn[rand];
-                    }
-                    else
-                    {
-                        done[done_u] = toReturn[rand];
+                        int prioritya = toReturn[j].priority;
+                        int priorityb = toReturn[j + 1].priority;
+
+                        if (prioritya >= priorityb)
+                        {
+                            temp = toReturn[j];
+                            toReturn[j] = toReturn[j + 1];
+                            toReturn[j + 1] = temp;
+                        }
                     }
                     rounds--;
-                }
-                for (int i = 0; i < not_done_u; i++)
-                {
-                    int rand = UnityEngine.Random.Range(0, not_done_u);
-                    temp = not_done[i];
-                    not_done[i] = not_done[rand];
-                    not_done[rand] = temp;
-                }
-                for (int i = 0; i < done_u; i++)
-                {
-                    int rand = UnityEngine.Random.Range(0, done_u);
-                    temp = done[i];
-                    done[i] = done[rand];
-                    done[rand] = temp;
-                }
-                for (int i = 0; i < done_u; i++)
-                {
-                    toReturn[i] = done[i];
-                }
-                for (int i = 0; i < not_done_u; i++)
-                {
-                    toReturn[i + done_u] = not_done[i];
                 }
                 break;
             default:

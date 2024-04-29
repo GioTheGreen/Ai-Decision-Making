@@ -373,6 +373,11 @@ namespace XNode {
             public NodeTintAttribute(byte r, byte g, byte b) {
                 color = new Color32(r, g, b, byte.MaxValue);
             }
+
+            public static implicit operator NodeTintAttribute((float, float, float) v)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         /// <summary> Specify a width for this node type </summary>

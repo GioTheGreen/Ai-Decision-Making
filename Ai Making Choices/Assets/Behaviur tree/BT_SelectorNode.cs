@@ -12,7 +12,7 @@ public class BT_SelectorNode : BT_BaseNode
     {
         foreach (NodePort p in Ports)
         {
-            if (p.fieldName == "condition")
+            if (p.fieldName == "condition" && p.ConnectionCount > 0)
             {
                 BT_Condition alpha = p.Connection.node as BT_Condition;
                 return alpha.GetCondition();

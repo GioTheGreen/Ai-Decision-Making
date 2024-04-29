@@ -19,33 +19,12 @@ public class test_chat : MonoBehaviour
     void Start()
     {
         BT.Refreash();
-
-        int Rand;
-        int[] LastRand;
-        int Max = 6;
-
-            LastRand = new int[Max];
-
-            for (int i = 1; i < Max; i++)
-            {
-                Rand = Random.Range(1, 6);
-
-                for (int j = 1; j < i; j++)
-                {
-                    while (Rand == LastRand[j])
-                    {
-                        Rand = Random.Range(1, 6);
-                    }
-                }
-
-                LastRand[i] = Rand;
-                print(Rand);
-            }
     }
     void Update()
     {
         dt = Time.deltaTime;
-        if ((BT.curent.GetNodeType() != "start") && (BT.curent.state == BT_BaseNode.EState.eInProgress) && (!BT.curent.conditionCheck()))
+
+        if ((BT.curent.state == BT_BaseNode.EState.eInProgress) && (!BT.curent.conditionCheck()))
         {
             switch (BT.curent.GetNodeType())
             {
@@ -64,12 +43,15 @@ public class test_chat : MonoBehaviour
                     }
                     break;
                 case "selector":
-                    BT_SequenceNode selector = BT.curent as BT_SequenceNode;
+                    BT_SelectorNode selector = BT.curent as BT_SelectorNode;
                     if (!checkPossablity(selector.getcondition()))
                     {
                         BT.Set_Stat(BT_BaseNode.EState.eFailed);
                     }
                     break;
+                default:
+
+                     break;
             }
             BT.curent.cChecked(true);
         }
