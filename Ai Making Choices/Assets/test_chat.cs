@@ -19,16 +19,79 @@ public class test_chat : MonoBehaviour
     void Start()
     {
         BT.Refreash();
+
+        int Rand;
+        int[] LastRand;
+        int Max = 6;
+
+            LastRand = new int[Max];
+
+            for (int i = 1; i < Max; i++)
+            {
+                Rand = Random.Range(1, 6);
+
+                for (int j = 1; j < i; j++)
+                {
+                    while (Rand == LastRand[j])
+                    {
+                        Rand = Random.Range(1, 6);
+                    }
+                }
+
+                LastRand[i] = Rand;
+                print(Rand);
+            }
     }
     void Update()
     {
         dt = Time.deltaTime;
-        if (BT.curent.GetNodeType() == "action" && BT.curent.state == BT_BaseNode.EState.eInProgress)
+        if ((BT.curent.GetNodeType() != "start") && (BT.curent.state == BT_BaseNode.EState.eInProgress) && (!BT.curent.conditionCheck()))
         {
-            if (checkPossablity(BT.Read_Action()))
+            switch (BT.curent.GetNodeType())
+            {
+                case "action":
+                    BT_ActionNode action = BT.curent as BT_ActionNode;
+                    if (!checkPossablity(action.getcondition()))
+                    {
+                        BT.Set_Stat(BT_BaseNode.EState.eFailed);
+                    }
+                        break;
+                case "sequence":
+                    BT_SequenceNode sequence = BT.curent as BT_SequenceNode;
+                    if (!checkPossablity(sequence.getcondition()))
+                    {
+                        BT.Set_Stat(BT_BaseNode.EState.eFailed);
+                    }
+                    break;
+                case "selector":
+                    BT_SequenceNode selector = BT.curent as BT_SequenceNode;
+                    if (!checkPossablity(selector.getcondition()))
+                    {
+                        BT.Set_Stat(BT_BaseNode.EState.eFailed);
+                    }
+                    break;
+            }
+            BT.curent.cChecked(true);
+        }
+        else if (BT.curent.GetNodeType() == "action" && BT.curent.state == BT_BaseNode.EState.eInProgress)
+        {
+            if (BT.curent.conditionCheck()) // check condition every call
+            {
+                BT_ActionNode action = BT.curent as BT_ActionNode;
+                if (checkPossablity(action.getcondition()))
+                {
+                    DoAction(BT.Read_Action());
+                }
+                else
+                {
+                    BT.Set_Stat(BT_BaseNode.EState.eFailed);
+                }
+            }
+            else
             {
                 DoAction(BT.Read_Action());
             }
+            
             
         }
         else if (BT.curent.GetNodeType() == "start" && BT.curent.state == BT_BaseNode.EState.eSuccess)

@@ -10,6 +10,7 @@ public class BT_ActionNode : BT_BaseNode
 	[Output] public int exit;
     [Output] public int condition;
     public string Action;
+    public bool continus_Check = false;
 	//public bool done = false;
 
 	public string GetAction() 

@@ -20,6 +20,7 @@ public class NG_BehaivurTree : NodeGraph {
         foreach (BT_BaseNode i in nodes)
         {
             i.state = EState.eUnkown;
+            i.cChecked(false);
             if (i.GetNodeType() == "start")
             {
                 curent = i;
@@ -29,6 +30,18 @@ public class NG_BehaivurTree : NodeGraph {
                 //BT_ActionNode a = i as BT_ActionNode;
                 //a.done = false;
             }
+
+            //if (i.PriorotySort == ESort.eRandom)
+            //{
+            //    foreach (NodePort p in curent.Ports)
+            //    {
+            //        if (p.fieldName == "exit")
+            //        {
+            //            int childaren = p.GetConnections().Count;
+
+            //        }
+            //    }
+            //}
         }
     }
 
