@@ -18,6 +18,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: -7486992032207970175}
@@ -49,11 +50,24 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 2
+    - _fieldName: condition
+      _node: {fileID: -7486992032207970175}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 1691658524351749012}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
 --- !u!114 &-7097131945533327232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +86,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: -7097131945533327232}
@@ -94,11 +109,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: -7097131945533327232}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 1
   entry: 0
   exit: 0
+  condition: 0
   Action: print/have
 --- !u!114 &-6361172818764333272
 MonoBehaviour:
@@ -118,6 +143,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: -6361172818764333272}
@@ -140,11 +166,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: -6361172818764333272}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 2
   entry: 0
   exit: 0
+  condition: 0
   Action: print/succeed
 --- !u!114 &-4572555023521113906
 MonoBehaviour:
@@ -164,6 +200,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: -4572555023521113906}
@@ -186,11 +223,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: -4572555023521113906}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
   Action: print/i
 --- !u!114 &-2820379539728691406
 MonoBehaviour:
@@ -210,6 +257,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: -2820379539728691406}
@@ -232,11 +280,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: condition
+      _node: {fileID: -2820379539728691406}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   state: 0
   PriorotySort: 0
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
   Action: print/never
 --- !u!114 &-653449866421311303
 MonoBehaviour:
@@ -256,6 +314,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: -653449866421311303}
@@ -278,11 +337,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 2
+    - _fieldName: condition
+      _node: {fileID: -653449866421311303}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
   Action: fail/fail
 --- !u!114 &11400000
 MonoBehaviour:
@@ -308,7 +377,8 @@ MonoBehaviour:
   - {fileID: -6361172818764333272}
   - {fileID: -7097131945533327232}
   - {fileID: 3172527089677956139}
-  curent: {fileID: 2631533545631050046}
+  - {fileID: 1691658524351749012}
+  curent: {fileID: 3172527089677956139}
   error: 0
   DefultAction: print/defult
 --- !u!114 &113992861711560254
@@ -329,6 +399,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: 113992861711560254}
@@ -351,12 +422,54 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: 113992861711560254}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
   Action: print/sequencer
+--- !u!114 &1691658524351749012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537fffda16239e647b45d47e2ce92ccb, type: 3}
+  m_Name: BT_Condition
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: -24}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1691658524351749012}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: condition
+        node: {fileID: -7486992032207970175}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  Condition: 
 --- !u!114 &2631533545631050046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +503,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+  state: 0
   PriorotySort: 1
   priority: 0
   exit: 0
@@ -412,6 +525,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: 3172527089677956139}
@@ -434,11 +548,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: 3172527089677956139}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 1
   PriorotySort: 0
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
   Action: wait/5
 --- !u!114 &4851575399936078326
 MonoBehaviour:
@@ -458,6 +582,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: 4851575399936078326}
@@ -486,11 +611,21 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: 4851575399936078326}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 0
   priority: 1
   entry: 0
   exit: 0
+  condition: 0
 --- !u!114 &5092118855374504795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +644,7 @@ MonoBehaviour:
     keys:
     - entry
     - exit
+    - condition
     values:
     - _fieldName: entry
       _node: {fileID: 5092118855374504795}
@@ -540,8 +676,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  state: 3
+    - _fieldName: condition
+      _node: {fileID: 5092118855374504795}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  state: 0
   PriorotySort: 1
   priority: 0
   entry: 0
   exit: 0
+  condition: 0
