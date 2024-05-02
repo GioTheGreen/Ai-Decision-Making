@@ -14,7 +14,7 @@ public class StartNodeEditor : NodeEditor
 {
     public override void OnBodyGUI()
     {
-        EditorStyles.label.normal.textColor = new Color(82f/255f, 33f/255f, 11f/255f);
+        EditorStyles.label.normal.textColor = new Color(255f/255f, 97f/255f, 79f/255f);
         base.OnBodyGUI();
         EditorStyles.label.normal.textColor = Color.white;
     }
